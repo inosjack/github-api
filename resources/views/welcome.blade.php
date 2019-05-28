@@ -8,6 +8,9 @@
             text-align: center;
             font-weight: bold;
         }
+        .form-control.is-invalid {
+            background-image: none !important;
+        }
     </style>
 @endsection
 @section('content')
