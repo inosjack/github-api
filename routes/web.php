@@ -16,6 +16,6 @@ Route::get('/', function () {
 });
 Route::post('check/url', 'GithubIssueController@getAllIssue')->name('get.all.issue');
 
-//Auth::routes();
-//
-//Route::get('/home', 'HomeController@index')->name('home');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
