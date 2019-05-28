@@ -48,6 +48,6 @@ Route::post('check/url', 'GithubIssueController@getAllIssue')->name('get.all.iss
 //    echo $response;
 //}
 
-//Auth::routes();
-//
-//Route::get('/home', 'HomeController@index')->name('home');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
