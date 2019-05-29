@@ -18,7 +18,7 @@
         <section class="hero">
             <div class="row justify-content-center">
                 <div class="col-md-8">
-                    <form method="POST" action="{{ route('get.all.issue') }}" id="form-get-open-issue">
+                    <form method="POST" action="{{ route('fetch.issue-report') }}" id="form-get-open-issue">
                         @csrf
                         <div class="row">
                             <div class="form-group col-md-12">

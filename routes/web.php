@@ -11,10 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::post('check/url', 'GithubIssueController@getAllIssue')->name('get.all.issue');
+Route::get('/', 'GithubIssueController@index');
+Route::post('fetch/issue-report', 'GithubIssueController@getIssuesReport')->name('fetch.issue-report');
 
 //Auth::routes();
 //
