@@ -55,7 +55,7 @@ class GithubIssueController extends Controller
                     ['view' => view('openissuetable',$fetch_data_from_github)->render()]
                 );
             }
-            $link = $fetch_data_from_github['links'][0];
+            $link = $fetch_data_from_github['links'];
             $total_open_issue = $fetch_data_from_github['total_open_issue'];
             $nub_of_open_in_last_24h += $fetch_data_from_github["nub_of_open_in_last_24h"];
             $nub_of_open_in_last_24h_lt_7d += $fetch_data_from_github["nub_of_open_in_last_24h_lt_7d"];
@@ -124,7 +124,7 @@ class GithubIssueController extends Controller
             'nub_of_open_in_last_24h' => $nub_of_open_in_last_24h,
             'nub_of_open_in_last_24h_lt_7d' => $nub_of_open_in_last_24h_lt_7d,
             'total_open_issue' => $response_array->total_count,
-            'links' => $headers['Link']
+            'links' => isset($headers['Link'])? $headers['Link'][0] : "",
         ];
     }
 }
