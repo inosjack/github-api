@@ -10,6 +10,7 @@
         }
         .form-control.is-invalid {
             background-image: none !important;
+            padding-right: 0;
         }
     </style>
 @endsection
